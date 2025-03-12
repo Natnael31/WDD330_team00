@@ -35,6 +35,7 @@ export default class ProductList {
         // const htmlStrings = list.map(productCardTemplate);
         // console.log(htmlStrings[0]);
         // this.listElement.insertAdjacentHTML('afterbegin', htmlStrings.join(''));
+
         renderListWithTemplate(productCardTemplate, this.listElement, list);
     }
 }
