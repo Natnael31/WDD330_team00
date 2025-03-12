@@ -44,6 +44,10 @@ export default class ProductDetails {
         array.push(this.product);
         console.log(array);
         setLocalStorage("so-cart", array);
+        const cardCounter = array.length;
+        console.log(cardCounter)
+        document.querySelector(".cart-count").textContent = cardCounter;
+
     }
     renderProductDetails(selector) {
         const element = document.querySelector(selector);
