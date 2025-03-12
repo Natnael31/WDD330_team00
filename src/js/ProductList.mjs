@@ -12,13 +12,10 @@ function productCardTemplate(product) {
     <h2 class="card__name">${product.Name}</h2>
     <p class="product-card__price">$${product.FinalPrice}</p>
     <p class="product-card__price" 
-   style="color: ${(product.FinalPrice < product.SuggestedRetailPrice) ? 'Green' : 'inherit'};">
-   ${(product.FinalPrice < product.SuggestedRetailPrice) ? "Discount" : ""}
-</p>
-
-     </a>
-    
-  </li>`;
+    style="color: ${(product.FinalPrice < product.SuggestedRetailPrice) ? 'Green' : 'inherit'};">
+    ${(product.FinalPrice < product.SuggestedRetailPrice) ? "Discount" : ""}
+    </p></a>
+ </li>`;
 }
 
 export default class ProductList {
