@@ -1,9 +1,13 @@
 import { getLocalStorage } from "./utils.mjs";
 
-function renderCartContents() {
-  const cartItems = getLocalStorage("so-cart");
+export function renderCartContents() {
+  const cartItems = getLocalStorage("so-cart") || [];
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
-  document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  const product_list = document.querySelector(".product-list");
+  product_list != null ? (product_list.innerHTML = htmlItems.join("")) : "";
+  const cardCounter = cartItems.length;
+  console.log(cardCounter);
+  document.querySelector(".cart-count").textContent = cardCounter;
 }
 
 function cartItemTemplate(item) {
